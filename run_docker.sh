@@ -1,0 +1,1 @@
+docker run --gpus all -it --rm  -e SHELL="/bin/bash" -p 8888:8888 -v`pwd`:/home/nonroot/ -u $(id -u ${USER}):$(id -g ${USER}) intro-python:latest python -m jupyterlab --port 8888 --no-browser --ip='0.0.0.0' --NotebookApp.token='' --NotebookApp.password=''
